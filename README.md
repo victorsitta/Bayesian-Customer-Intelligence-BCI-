@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🧠 Bayesian Customer Intelligence (BCI)
+# Bayesian Customer Intelligence (BCI)
 
   <p align="center">
     <strong>Modelo Probabilístico de Inferência de Intenção de Compra em E-Commerce</strong>
@@ -23,7 +23,7 @@
 
 ---
 
-## 📖 Contexto e Problema de Negócio
+## 📄 Contexto e Problema de Negócio
 
 Em plataformas de e-commerce, identificar a **propensão de compra** de um usuário em tempo real permite personalizar ofertas, ativar gatilhos de retenção e otimizar campanhas de marketing. 
 
@@ -31,15 +31,15 @@ Este projeto constrói um **Modelo de Inferência Bayesiana** simples que calcul
 
 ---
 
-## 🕸️ Estrutura da Rede Bayesiana
+## 📊 Estrutura da Rede Bayesiana
 
 A rede avalia como três variáveis de entrada (**Evidências**) influenciam a variável dependente alvo (**Compra**):
 
 ```mermaid
 graph TD
-    A[📜 Histórico de Compras] -->|Impacto| D{🛒 Decisão de Compra}
-    B[⏱️ Tempo no Site] -->|Impacto| D
-    C[🏷️ Clicou em Promoção] -->|Impacto| D
+    A[Histórico de Compras] -->|Impacto| D{Decisão de Compra}
+    B[Tempo no Site] -->|Impacto| D
+    C[Clicou em Promoção] -->|Impacto| D
 
     style A fill:#1e293b,stroke:#38bdf8,stroke-width:2px,color:#fff
     style B fill:#1e293b,stroke:#38bdf8,stroke-width:2px,color:#fff
@@ -49,7 +49,7 @@ graph TD
 
 ---
 
-## 🛠️ Como o Código Funciona por Baixo dos Panos
+## ⚙️ Arquitetura e Funcionamento do Código
 
 O script foi projetado em Python sem a necessidade de bibliotecas externas complexas, utilizando estruturas de dados nativas de alta performance. A lógica é dividida em **3 pilares principais**:
 
@@ -74,11 +74,11 @@ Para representar a rede, utiliza-se um dicionário `probabilidades` onde a chave
 ```
 
 > **Por que usar Tuplas como chave?**  
-> Em Python, tuplas são estruturas imutáveis e possuem suporte nativo a Hash Table. Usar a tupla `(H, T, P)` como chave do dicionário permite realizar a busca direta da probabilidade em **tempo constante $O(1)$**, substituindo completamente estruturas lentas ou repetitivas de `if/else`.
+> Em Python, tuplas são estruturas imutáveis e possuem suporte nativo a Hash Table. Usar a tupla `(H, T, P)` como chave do dicionário permite realizar a busca direta da probabilidade em **tempo constante $O(1)$**, substituindo completamente estruturas repetitivas de `if/else`.
 
 ---
 
-### 2. A Função de Inferência `calcular_probabilidade_compra`
+### 2. Função de Inferência `calcular_probabilidade_compra`
 A função recebe um dicionário de evidências do cliente e realiza o cálculo da distribuição de probabilidade para a tomada de decisão:
 
 ```python
@@ -99,16 +99,16 @@ def calcular_probabilidade_compra(evidencias):
 
 ---
 
-### 3. A Matemática: Regra do Complementar
+### 3. Modelo Matemático: Regra do Complementar
 O modelo garante consistência probabilística respeitando a **Regra do Evento Complementar**:
 
 $$P(\text{Não Comprar}) = 1 - P(\text{Comprar})$$
 
-Como o espaço amostral para a tomada de decisão do cliente é binário (ele finaliza o pedido ou abandona a sessão), a soma de ambas as probabilidades é rigorosamente igual a $1.0$ ($100\%$).
+Como o espaço amostral para a tomada de decisão do cliente é binário (ele finaliza o pedido ou abandona a sessão), a soma de ambas as probabilidades é igual a $1.0$ ($100\%$).
 
 ---
 
-## 📊 Variáveis Comportamentais do Modelo
+## 📋 Variáveis Comportamentais do Modelo
 
 | Variável | Tipo | Valores Válidos | Descrição Negocial |
 | :--- | :---: | :---: | :--- |
@@ -119,12 +119,12 @@ Como o espaço amostral para a tomada de decisão do cliente é binário (ele fi
 
 ---
 
-## 🚀 Como Executar o Projeto
+## 💻 Instruções de Execução
 
-### 📋 Pré-requisitos
+### Pré-requisitos
 * Python 3.8+ instalado.
 
-### 💻 Executando no Terminal
+### Executando no Terminal
 
 ```bash
 # 1. Clone o repositório
@@ -139,7 +139,7 @@ python index.py
 
 ---
 
-## 🖥️ Saída Esperada no Terminal
+## 📈 Saída Esperada
 
 ```text
 ===============================================
@@ -155,5 +155,5 @@ Evidências analisadas: {'HistoricoCompras': 1, 'TempoNoSite': 0, 'ClicouEmPromo
 ---
 
 <div align="center">
-  <p>Desenvolvido por <strong>João Victor Sitta</strong> durante a jornada <strong>Tech Builder</strong> 🚀</p>
+  <p>Desenvolvido por <strong>João Victor Sitta</strong> durante o programa <strong>Tech Builder</strong></p>
 </div>
