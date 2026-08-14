@@ -8,9 +8,9 @@
 
   <!-- BADGES / SHIELDS -->
   <p align="center">
-    <img src="[https://img.shields.io/badge/Python-3873A9?style=for-the-badge&logo=python&logoColor=white](https://img.shields.io/badge/Python-3873A9?style=for-the-badge&logo=python&logoColor=white)" alt="Python" />
-    <img src="[https://img.shields.io/badge/Status-Conclu%C3%ADdo-brightgreen?style=for-the-badge](https://img.shields.io/badge/Status-Conclu%C3%ADdo-brightgreen?style=for-the-badge)" alt="Status" />
-    <img src="[https://img.shields.io/badge/AI%20%26%20Data-Bayesian-FF6F00?style=for-the-badge](https://img.shields.io/badge/AI%20%26%20Data-Bayesian-FF6F00?style=for-the-badge)" alt="Bayesian" />
+    <img src="https://img.shields.io/badge/Python-3873A9?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+    <img src="https://img.shields.io/badge/Status-Conclu%C3%ADdo-brightgreen?style=for-the-badge" alt="Status" />
+    <img src="https://img.shields.io/badge/AI%20%26%20Data-Bayesian-FF6F00?style=for-the-badge" alt="Bayesian" />
   </p>
 
 </div>
@@ -73,8 +73,8 @@ Para representar a rede, utiliza-se um dicionário `probabilidades` onde a chave
 }
 ```
 
-> **Por que usar Tuplas?**  
-> Em Python, tuplas são imutáveis e possuem suporte nativo a operações de Hash Table. Isso permite realizar a busca da probabilidade exata em tempo constante $O(1)$, dispensando o uso de múltiplos blocos de `if/else`.
+> **Por que usar Tuplas como chave?**  
+> Em Python, tuplas são estruturas imutáveis e possuem suporte nativo a Hash Table. Usar a tupla `(H, T, P)` como chave do dicionário permite realizar a busca direta da probabilidade em **tempo constante $O(1)$**, substituindo completamente estruturas lentas ou repetitivas de `if/else`.
 
 ---
 
@@ -128,7 +128,7 @@ Como o espaço amostral para a tomada de decisão do cliente é binário (ele fi
 
 ```bash
 # 1. Clone o repositório
-git clone https://github.com/SEU_USUARIO/Bayesian-Customer-Intelligence.git
+git clone [https://github.com/SEU_USUARIO/Bayesian-Customer-Intelligence.git](https://github.com/SEU_USUARIO/Bayesian-Customer-Intelligence.git)
 
 # 2. Acesse a pasta do projeto
 cd "Bayesian Customer Intelligence (BCI)"
