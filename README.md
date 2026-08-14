@@ -154,6 +154,8 @@ Evidências analisadas: {'HistoricoCompras': 1, 'TempoNoSite': 0, 'ClicouEmPromo
 
 ---
 
+<img width="802" height="232" alt="image" src="https://github.com/user-attachments/assets/1d5fddae-985c-4f99-8b7b-b4c12e2c0088" />
+
 <div align="center">
   <p>Desenvolvido por <strong>João Victor Sitta</strong> durante o programa <strong>Tech Builder</strong></p>
 </div>
